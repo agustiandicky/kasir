@@ -41,7 +41,7 @@
                                         @foreach ($data_user as $row)
                                             <tr>
                                                 <td>{{ $no++ }}</td>
-                                                <td>{{ $row->nama }}</td>
+                                                <td>{{ $row->name }}</td>
                                                 <td>{{ $row->email }}</td>
                                                 <td>{{ $row->role }}</td>
                                                 <td>

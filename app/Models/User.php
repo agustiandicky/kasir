@@ -36,6 +36,11 @@ class User extends Authenticatable
         'password',
     ];
 
-    const CREATED_AT = 'creation_at';
+    public function hasRole($role)
+    {
+        return $this->role == $role;
+    }
+
+    const CREATED_AT = 'created_at';
     const UPDATED_AT = 'updated_at';
 }

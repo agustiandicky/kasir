@@ -12,7 +12,7 @@ class AuthController extends Controller
     {
         return response()
             ->view('index', [
-                "title" => "Login"
+                "title" => "Login Page"
             ]);
     }
 

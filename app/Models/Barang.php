@@ -5,14 +5,17 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class JenisBarang extends Model
+class Barang extends Model
 {
     use HasFactory;
-    
-    protected $table = 'tbl_jenis_barang';
+
+    protected $table = 'tbl_barang';
 
     protected $fillable = [
-        'nama_jenis'
+        'id_jenis',
+        'nama_barang',
+        'harga',
+        'stok'
     ];
 
     public function hasRole($role)

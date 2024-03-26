@@ -30,6 +30,7 @@
                                         <tr>
                                             <th>No</th>
                                             <th>Nama</th>
+                                            <th>Email</th>
                                             <th>Role</th>
                                             <th>Action</th>
                                         </tr>

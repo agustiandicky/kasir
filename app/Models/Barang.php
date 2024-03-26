@@ -18,10 +18,10 @@ class Barang extends Model
         'stok'
     ];
 
-    public function hasRole($role)
-    {
-        return $this->role == $role;
-    }
+    // public function hasRole($role)
+    // {
+    //     return $this->role == $role;
+    // }
 
     const CREATED_AT = 'created_at';
     const UPDATED_AT = 'updated_at';

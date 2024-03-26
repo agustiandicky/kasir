@@ -5,15 +5,19 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Diskon extends Model
+class Transaksi extends Model
 {
     use HasFactory;
 
-    protected $table = 'tbl_diskon';
+    protected $table = 'tbl_transaksi';
 
     protected $fillable = [
-        'total_belanja',
-        'diskon'
+        'no_transaksi',
+        'tgl_transaksi',
+        'diskon',
+        'kembalian',
+        'uang_pembeli',
+        'total_bayar'
     ];
 
     // public function hasRole($role)

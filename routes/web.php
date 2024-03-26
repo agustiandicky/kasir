@@ -6,6 +6,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\BarangController;
 use App\Http\Controllers\DiskonController;
+use App\Http\Controllers\TransaksiController;
 use App\Http\Controllers\JenisBarangController;
 
 /*
@@ -29,7 +30,7 @@ Route::get('/', [AuthController::class, 'index']);
 Route::post('/cek_login', [AuthController::class, 'cek_login']);
 Route::get('/logout', [AuthController::class, 'logout']);
 
-Route::group(['middleware' => ['auth', 'checkrole:admin']], function () {
+Route::group(['middleware' => ['auth', 'checkrole:admin,kasir']], function () {
 
   //CRUD Data User
   Route::get('/user', [UserController::class, 'index']);
@@ -62,4 +63,7 @@ Route::group(['middleware' => ['auth', 'checkrole:admin,kasir']], function() {
   Route::get('/profile', [UserController::class, 'profile']);
   Route::post('/profile/updateprofile/{id}', [UserController::class, 'updateprofile']);
   
+   //Data Transaksi
+   Route::get('/transaksi', [TransaksiController::class, 'index']);
+   Route::get('/transaksi/create', [TransaksiController::class, 'create']);
 });
